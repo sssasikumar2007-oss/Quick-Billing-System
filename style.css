@@ -1,0 +1,128 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #eef2f7;
+    margin: 0;
+    padding: 25px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px #ccd2dc;
+}
+
+h1 {
+    text-align: center;
+    color: #174ea6;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+}
+
+h2 {
+    color: #174ea6;
+    margin-top: 30px;
+}
+
+.form {
+    display: grid;
+    gap: 10px;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+button {
+    background: #1769d2;
+    color: white;
+    border: none;
+    padding: 11px;
+    margin-top: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #104c9e;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background: #1769d2;
+    color: white;
+}
+
+.summary {
+    margin-top: 25px;
+    max-width: 350px;
+    margin-left: auto;
+}
+
+.summary p, .summary h3 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.summary h3 {
+    color: #138044;
+}
+
+.clear {
+    background: #d93636;
+}
+
+.remove {
+    background: #d93636;
+    padding: 6px;
+    margin: 0;
+}
+
+#invoice {
+    margin-top: 20px;
+}
+
+@media print {
+    body {
+        background: white;
+        padding: 0;
+    }
+
+    .container {
+        box-shadow: none;
+    }
+
+    .form, .summary button, .remove {
+        display: none;
+    }
+}
