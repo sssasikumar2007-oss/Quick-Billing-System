@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Billing System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Quick Billing System</h1>
+    <p class="subtitle">Simple and Fast Retail Billing</p>
+
+    <div class="form">
+        <label>Product Name</label>
+        <input type="text" id="product" placeholder="Enter product name">
+
+        <label>Price (₹)</label>
+        <input type="number" id="price" min="0" placeholder="Enter price">
+
+        <label>Quantity</label>
+        <input type="number" id="quantity" min="1" value="1">
+
+        <button onclick="addItem()">Add Product</button>
+    </div>
+
+    <h2>Bill Details</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Qty</th>
+                <th>Total</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="billItems"></tbody>
+    </table>
+
+    <div class="summary">
+        <p>Subtotal: ₹<span id="subtotal">0.00</span></p>
+
+        <label>Discount (%)</label>
+        <input type="number" id="discount" value="0" min="0" max="100"
+               oninput="calculateBill()">
+
+        <label>Tax (%)</label>
+        <input type="number" id="tax" value="5" min="0"
+               oninput="calculateBill()">
+
+        <h3>Grand Total: ₹<span id="grandTotal">0.00</span></h3>
+
+        <label>Payment Method</label>
+        <select id="payment">
+            <option>Cash</option>
+            <option>UPI</option>
+            <option>Card</option>
+        </select>
+
+        <button onclick="printBill()">Print Bill</button>
+        <button class="clear" onclick="clearBill()">Clear Bill</button>
+    </div>
+
+    <div id="invoice"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
